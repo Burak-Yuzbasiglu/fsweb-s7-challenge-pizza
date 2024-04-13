@@ -13,9 +13,9 @@ function Pizza() {
 
     return (
         <>
-            <div class="container text-center" style={{ backgroundColor: "blue" }}>
+            <div class="container text-center" style={{ backgroundColor: "white" }}>
                 <div class="row">
-                    <div class="col">
+                    <div class="col" style={{ textAlign: "left" }}>
                         <h1>{title}</h1>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ function Pizza() {
                         <h4>{rateCount}</h4>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style={{ textAlign: "left" }}>
                     <div class="col">
                         <h5>{description}</h5>
                     </div>

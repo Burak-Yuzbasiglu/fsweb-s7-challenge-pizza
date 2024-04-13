@@ -5,13 +5,17 @@ import workintech from '/workintech.svg'
 import './App.css'
 import Pizza from './components/pizza'
 import Features from './components/features'
+import Details from './components/details'
 
 function App() {
   const [count, setCount] = useState(0)
 
+
+
   return (<div>
     <Pizza></Pizza>
     <Features></Features>
+    <Details></Details>
   </div>)
 }
 
