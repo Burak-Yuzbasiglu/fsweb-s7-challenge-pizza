@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import './App.css'
 
@@ -9,24 +9,22 @@ import Success from './Success.jsx';
 
 function App() {
 
-  useEffect(() => {
-
-  })
-
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedType, setSelectedType] = useState("");
+  const [selectedToppings, setSelectedToppings] = useState([]);
+  const [quantity, setQuantity] = useState(1);
 
   return (<>
     <div>
-
-
       <Switch>
         <Route path="/" exact>
           <Home />
         </Route>
         <Route path="/orderpizza" exact>
-          <OrderPizza />
+          <OrderPizza selectedSize={selectedSize} setSelectedSize={setSelectedSize} selectedType={selectedType} setSelectedType={setSelectedType} selectedToppings={selectedToppings} setSelectedToppings={setSelectedToppings} quantity={quantity} setQuantity={setQuantity} />
         </Route>
         <Route path="/success" exact>
-          <Success />
+          <Success selectedSize={selectedSize} selectedType={selectedType} selectedToppings={selectedToppings} quantity={quantity} />
         </Route>
       </Switch>
 

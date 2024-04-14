@@ -2,15 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import './pizza.css'
 import { useHistory } from 'react-router-dom';
-const selectedToppings = ["Domates", "Biber", "Sosis", "mısır", "sucuk"]
+
+//const selectedToppings = ["Domates", "Biber", "Sosis", "mısır", "sucuk"]
 
 
-
-
-function Details() {
+function Details({ selectedSize, selectedType, selectedToppings, quantity, setQuantity }) {
 
     const [orderNote, setOrderNote] = useState("");
-    const [quantity, setQuantity] = useState(1);
+    //const [quantity, setQuantity] = useState(1);
     const history = useHistory();
 
     const handleIncrement = () => {
@@ -25,13 +24,21 @@ function Details() {
 
     const calculateTotalPrice = () => {
         const toppingPrice = selectedToppings.length * 5;
-        const totalPrice = 100 + toppingPrice;
+        const totalPrice = (100 + toppingPrice) * quantity;
         return totalPrice;
     };
 
 
     const handleOrder = () => {
-        history.push('/success'); // Butona tıklandığında '/app' rotasına yönlendirme
+        if (selectedSize == null) {
+            alert("Pizza Boyutu alanı boş bırakılamaz!!!")
+            return;
+        }
+        if (selectedType === "") {
+            alert("Hamur Tipi alanı boş bırakılamaz!!!")
+            return;
+        }
+        history.push('/success');
     };
 
     return (
@@ -55,11 +62,12 @@ function Details() {
                     <div className="order-summary">
                         <div className='text'>
                             <h4>Sipariş Toplamı</h4>
-                            <p>Seçimler {selectedToppings.length * 5}₺</p>
+                            <p>Seçimler {(selectedToppings.length * 5) * quantity}₺</p>
                             <p className='total'>Toplam {calculateTotalPrice()}₺</p>
                         </div>
                         <button onClick={handleOrder}>SİPARİŞ VER</button>
                     </div>
+
                 </div>
             </div>
         </>

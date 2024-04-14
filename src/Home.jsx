@@ -1,20 +1,20 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import './Home.css'; // Stil dosyası
-
+import './Home.css';
 function Home() {
     const history = useHistory();
 
     const handleButtonClick = () => {
-        history.push('/orderpizza'); // Butona tıklandığında '/app' rotasına yönlendirme
+        history.push('/orderpizza');
     };
 
     return (
         <div className="home-container">
             <div className="banner">
-                <h1>Teknolojik Yemekler</h1>
-                <h2>KOD ACIKTIRIR</h2>
-                <h3>PİZZA, DOYURUR</h3>
+                <h1 className="titleH">Teknolojik Yemekler</h1>
+                <h3 className="opportunity-text">Fırsatı Kaçırma</h3>
+                <h2 className="subtitleH">KOD ACIKTIRIR</h2>
+                <h3 className="subtitleH">PIZZA, DOYURUR</h3>
                 <button className="cta-button" onClick={handleButtonClick}>ACIKTIM</button>
             </div>
         </div>

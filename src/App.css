@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +42,35 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.restaurant-titleO {
+  font-family: Londrina Solid;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
+}
+
+.home-buttonO {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  color: #5F5F5F;
+}
+
+.order-buttonO {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  color: #CE2829;
+}
+
+.form-bannerO {
+  width: 90%;
+  margin-bottom: 50px;
 }

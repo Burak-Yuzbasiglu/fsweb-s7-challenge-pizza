@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './pizza.css'
 
 
@@ -8,13 +8,11 @@ const sizes = ["Küçük", "Orta", "Büyük"]
 const malzemeler = ["Pepperoni", "Domates", "Biber", "Sosis", "mısır", "sucuk", "Jambon", "Mantar", "Ananas", "Tavuk Izgara", "Jalepeno", "Kabak", "Soğan", "Sarımsak"]
 
 
-function Features() {
-    const [selectedSize, setSelectedSize] = useState(null);
-    const [selectedType, setSelectedType] = useState("");
+function Features({ selectedSize, setSelectedSize, selectedType, setSelectedType, selectedToppings, setSelectedToppings }) {
 
-    const [selectedToppings, setSelectedToppings] = useState([]);
-
-
+    //const [selectedSize, setSelectedSize] = useState(null);
+    //const [selectedType, setSelectedType] = useState("");
+    //const [selectedToppings, setSelectedToppings] = useState([]);
 
     const handleChangeSize = (e) => {
         setSelectedSize(e.target.value);
@@ -22,16 +20,15 @@ function Features() {
 
     const handleChangeType = (e) => {
         setSelectedType(e.target.value);
-
     };
 
     const handleChangeToppings = (e) => {
         const { value, checked } = e.target;
         if (checked) {
             setSelectedToppings([...selectedToppings, value]);
-        } else {
-            setSelectedToppings(selectedToppings.filter(item => item !== value));
+            return;
         }
+        setSelectedToppings(selectedToppings.filter(item => item !== value));
     };
 
     return (
@@ -42,13 +39,14 @@ function Features() {
                         <h4 className='sizeType'>Boyut Seç</h4>
                         {sizes.map((size, index) => (
                             <label key={index} className="radioLabel">
-                                <input
+                                <input required
                                     type="radio"
                                     onChange={handleChangeSize}
                                     name='boyut'
                                     value={size}
                                     checked={selectedSize === size}
                                     className="radioInput"
+
                                 />
                                 {size}
                             </label>
