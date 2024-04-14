@@ -1,10 +1,8 @@
 .home-container {
     background-image: url('../assets/mile1-assets/home-banner.png');
-
     background-size: cover;
     background-position: center;
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +31,6 @@
 
 .cta-button:hover {
     background-color: #ffcc00;
-
 }
 
 .opportunity-text {

@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react'
 import './pizza.css'
 
-
-
-const pizzaTypes = ["İnce Hamur", "Normal Hamur", "Kalın Hamur"]
+const pizzaTypes = ["Ekstra İnce Hamur", "İnce Hamur", "Normal Hamur", "Kalın Hamur", "Ekstra Kalın Hamur"]
 const sizes = ["Küçük", "Orta", "Büyük"]
 const malzemeler = ["Pepperoni", "Domates", "Biber", "Sosis", "mısır", "sucuk", "Jambon", "Mantar", "Ananas", "Tavuk Izgara", "Jalepeno", "Kabak", "Soğan", "Sarımsak"]
 
 
-function Features({ selectedSize, setSelectedSize, selectedType, setSelectedType, selectedToppings, setSelectedToppings }) {
+function Features(props) {
+
+    const { selectedSize, setSelectedSize, selectedType, setSelectedType, selectedToppings, setSelectedToppings } = props
 
     //const [selectedSize, setSelectedSize] = useState(null);
     //const [selectedType, setSelectedType] = useState("");
@@ -70,7 +69,7 @@ function Features({ selectedSize, setSelectedSize, selectedType, setSelectedType
                 <div class="row">
                     <div class="col" style={{ textAlign: "left" }}>
                         <h4 className='h4gp'>Ek Malzemeler</h4>
-                        <h7>En Fazla 10 malzeme seçebilirsiniz. 5₺</h7>
+                        <h7 className="h7gp">En Fazla 10 malzeme seçebilirsiniz. 5₺</h7>
                         <div className="toppings-container">
                             {malzemeler.map((malzeme, index) => (
 
@@ -87,7 +86,7 @@ function Features({ selectedSize, setSelectedSize, selectedType, setSelectedType
 
                             ))}
                         </div>
-                        <p>Seçilen Malzemeler: {selectedToppings.join(', ')}</p>
+
                     </div>
                 </div>
             </div>

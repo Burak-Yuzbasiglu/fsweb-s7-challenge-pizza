@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { useHistory } from 'react-router-dom';
 
 import './App.css'
@@ -9,7 +8,9 @@ import Details from './components/details'
 './assets/mile2-aseets/pictures/form-banner.png'
 
 
-function OrderPizza({ selectedSize, setSelectedSize, selectedType, setSelectedType, selectedToppings, setSelectedToppings, quantity, setQuantity }) {
+function OrderPizza(props) {
+
+    const { selectedSize, setSelectedSize, selectedType, setSelectedType, selectedToppings, setSelectedToppings, quantity, setQuantity } = props
 
     const history = useHistory();
 
@@ -32,6 +33,7 @@ function OrderPizza({ selectedSize, setSelectedSize, selectedType, setSelectedTy
                 <span>-</span>
                 <button className="order-buttonO" >Sipariş Oluştur</button>
             </div>
+
         </div>
         <div className='container'>
 

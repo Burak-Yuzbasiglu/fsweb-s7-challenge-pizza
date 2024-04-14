@@ -3,10 +3,9 @@ import { useState } from 'react'
 import './pizza.css'
 import { useHistory } from 'react-router-dom';
 
-//const selectedToppings = ["Domates", "Biber", "Sosis", "mısır", "sucuk"]
+function Details(props) {
 
-
-function Details({ selectedSize, selectedType, selectedToppings, quantity, setQuantity }) {
+    const { selectedSize, selectedType, selectedToppings, quantity, setQuantity } = props
 
     const [orderNote, setOrderNote] = useState("");
     //const [quantity, setQuantity] = useState(1);
@@ -45,7 +44,7 @@ function Details({ selectedSize, selectedType, selectedToppings, quantity, setQu
         <>
             <div >
                 <div className="order-note">
-                    <h4>Sipariş Notu</h4>
+                    <h4 className='orderTittleNote'>Sipariş Notu</h4>
                     <textarea
                         placeholder="Siparişine eklemek istediğin bir not var mı?"
                         value={orderNote}
@@ -61,8 +60,8 @@ function Details({ selectedSize, selectedType, selectedToppings, quantity, setQu
                     </div>
                     <div className="order-summary">
                         <div className='text'>
-                            <h4>Sipariş Toplamı</h4>
-                            <p>Seçimler {(selectedToppings.length * 5) * quantity}₺</p>
+                            <h4 className='orderTotal'>Sipariş Toplamı</h4>
+                            <p>Seçimler   {(selectedToppings.length * 5) * quantity}₺</p>
                             <p className='total'>Toplam {calculateTotalPrice()}₺</p>
                         </div>
                         <button onClick={handleOrder}>SİPARİŞ VER</button>

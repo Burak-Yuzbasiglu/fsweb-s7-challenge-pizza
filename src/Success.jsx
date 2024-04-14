@@ -1,7 +1,10 @@
 import React from 'react';
 import './Success.css'
 
-function Success({ selectedSize, selectedType, selectedToppings, quantity }) {
+function Success(props) {
+
+    const { selectedSize, selectedType, selectedToppings, quantity } = props
+
     const toppingsString = selectedToppings.length < 1 ? "Seçilmedi" : selectedToppings.join(', ');
     const totalSelectedToppings = selectedToppings.length * 5;
 

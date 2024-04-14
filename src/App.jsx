@@ -27,11 +27,6 @@ function App() {
           <Success selectedSize={selectedSize} selectedType={selectedType} selectedToppings={selectedToppings} quantity={quantity} />
         </Route>
       </Switch>
-
-
-
-
-
     </div>
   </>)
 }
