@@ -36,11 +36,47 @@
     }
 }
 
+
+.header {
+    background-color: #CE2829;
+
+    color: white;
+    width: 100%;
+    padding: 20px;
+
+
+}
+
+.title {
+
+    align-items: center;
+
+}
+
+.menu-buttons {
+    display: flex;
+}
+
+.menu-buttons button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+
+}
+
+.menu-buttons button:hover {
+    text-decoration: underline;
+}
+
 .container {
 
-    width: 685px;
+    max-width: 630px;
     margin: 0 auto;
 }
+
+
 
 .card {
     padding: 2em;
@@ -48,6 +84,41 @@
 
 .read-the-docs {
     color: #888;
+}
+
+.pizzaTittle {
+    color: #292929;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.priceTittle {
+    margin-bottom: 30px;
+}
+
+
+.rate {
+    color: #5F5F5F
+}
+
+.rateCount {
+    color: #5F5F5F;
+}
+
+.description {
+    color: #5F5F5F;
+    margin-bottom: 40px;
+}
+
+
+.sizeType {
+    margin-bottom: 30px;
+}
+
+
+.h4gp {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .radioInput {
@@ -78,7 +149,8 @@
 .toppings-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
+    margin-top: 30px;
 }
 
 .order-summary button {
@@ -101,8 +173,8 @@
 }
 
 .leftButton {
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 45px;
     background-color: #FDC913;
     color: black;
     border: none;
@@ -115,8 +187,8 @@
 }
 
 .rightButton {
-    height: 60px;
-    width: 60px;
+    height: 55px;
+    width: 45px;
     background-color: #FDC913;
     color: black;
     border: none;
@@ -130,15 +202,19 @@
 
 
 .counter span {
-    align-items;
-    height: 60px;
-    width: 60px;
+
+    height: 55px;
+    width: 45px;
     background-color: white;
     color: black;
     border: 1px solid rgb(197, 196, 196);
     padding: 15px 10px;
 
     cursor: pointer;
+}
+
+.order-note {
+    margin-top: 80px;
 }
 
 .order-note textarea {
@@ -151,7 +227,7 @@
     font-size: 16px;
 }
 
-.order-note h5 {
+.order-note h4 {
     margin-bottom: 10px;
     text-align: left;
 }
@@ -170,6 +246,11 @@
     text-align: left;
 
 
+}
+
+.order-summary h4 {
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 .total {

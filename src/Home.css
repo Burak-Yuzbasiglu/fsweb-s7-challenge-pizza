@@ -1,0 +1,32 @@
+.home-container {
+    background-image: url('../assets/mile1-assets/home-banner.png');
+    /* Arkaplan resmi */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Ekranın tamamını kaplayacak şekilde yükseklik */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    text-align: center;
+    color: white;
+}
+
+.cta-button {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #ffcc00;
+    /* Hover durumunda rengi değiştirme */
+}

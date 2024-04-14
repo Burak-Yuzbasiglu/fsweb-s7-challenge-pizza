@@ -1,22 +1,41 @@
-import { useState } from 'react'
-import { Form, FormGroup, Input, Label } from 'reactstrap'
-import reactLogo from './assets/react.svg'
-import workintech from '/workintech.svg'
+import { useState, useEffect } from 'react'
+
 import './App.css'
-import Pizza from './components/pizza'
-import Features from './components/features'
-import Details from './components/details'
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home.jsx'
+import OrderPizza from './OrderPizza.jsx'
+import Success from './Success.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+
+  })
+
+
+  return (<>
+    <div>
+
+
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/orderpizza" exact>
+          <OrderPizza />
+        </Route>
+        <Route path="/success" exact>
+          <Success />
+        </Route>
+      </Switch>
 
 
 
-  return (<div>
-    <Pizza></Pizza>
-    <Features></Features>
-    <Details></Details>
-  </div>)
+
+
+    </div>
+  </>)
 }
 
 export default App

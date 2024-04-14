@@ -5,7 +5,7 @@ import './pizza.css'
 
 const pizzaTypes = ["İnce Hamur", "Normal Hamur", "Kalın Hamur"]
 const sizes = ["Küçük", "Orta", "Büyük"]
-const malzemeler = ["Pepperoni", "Domates", "Biber", "Sosis", "mısır", "sucuk", "Kanada Jambonu", "Mantar", "Ananas", "Tavuk Izgara", "Jalepeno", "Kabak", "Soğan", "Sarımsak"]
+const malzemeler = ["Pepperoni", "Domates", "Biber", "Sosis", "mısır", "sucuk", "Jambon", "Mantar", "Ananas", "Tavuk Izgara", "Jalepeno", "Kabak", "Soğan", "Sarımsak"]
 
 
 function Features() {
@@ -36,10 +36,10 @@ function Features() {
 
     return (
         <>
-            <div class="container text-center" style={{ background: "white" }}>
+            <div style={{ background: "white" }}>
                 <div class="row">
                     <div class="col" style={{ textAlign: "left" }}>
-                        <h2>Boyut Seç</h2>
+                        <h4 className='sizeType'>Boyut Seç</h4>
                         {sizes.map((size, index) => (
                             <label key={index} className="radioLabel">
                                 <input
@@ -56,7 +56,7 @@ function Features() {
 
                     </div>
                     <div class="col" style={{ textAlign: "left" }}>
-                        <h3>Hamur Seç</h3>
+                        <h4 className='sizeType'>Hamur Seç</h4>
                         <select onChange={handleChangeType} value={selectedType}>
                             <option value="">Hamur Kalınlığı</option>
                             {pizzaTypes.map((type, index) => (
@@ -71,8 +71,8 @@ function Features() {
 
                 <div class="row">
                     <div class="col" style={{ textAlign: "left" }}>
-                        <h5>Ek Malzemeler</h5>
-                        <h6>En Fazla 10 malzeme seçebilirsiniz. 5₺</h6>
+                        <h4 className='h4gp'>Ek Malzemeler</h4>
+                        <h7>En Fazla 10 malzeme seçebilirsiniz. 5₺</h7>
                         <div className="toppings-container">
                             {malzemeler.map((malzeme, index) => (
 

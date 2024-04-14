@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './pizza.css'
-
+import { useHistory } from 'react-router-dom';
 const selectedToppings = ["Domates", "Biber", "Sosis", "mısır", "sucuk"]
 
 
@@ -11,6 +11,7 @@ function Details() {
 
     const [orderNote, setOrderNote] = useState("");
     const [quantity, setQuantity] = useState(1);
+    const history = useHistory();
 
     const handleIncrement = () => {
         setQuantity(quantity + 1);
@@ -29,13 +30,15 @@ function Details() {
     };
 
 
-
+    const handleOrder = () => {
+        history.push('/success'); // Butona tıklandığında '/app' rotasına yönlendirme
+    };
 
     return (
         <>
-            <div className="container" >
+            <div >
                 <div className="order-note">
-                    <h5>Sipariş Notu</h5>
+                    <h4>Sipariş Notu</h4>
                     <textarea
                         placeholder="Siparişine eklemek istediğin bir not var mı?"
                         value={orderNote}
@@ -51,11 +54,11 @@ function Details() {
                     </div>
                     <div className="order-summary">
                         <div className='text'>
-                            <p>Sipariş Toplamı</p>
+                            <h4>Sipariş Toplamı</h4>
                             <p>Seçimler {selectedToppings.length * 5}₺</p>
                             <p className='total'>Toplam {calculateTotalPrice()}₺</p>
                         </div>
-                        <button>SİPARİŞ VER</button>
+                        <button onClick={handleOrder}>SİPARİŞ VER</button>
                     </div>
                 </div>
             </div>
