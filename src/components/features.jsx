@@ -9,7 +9,7 @@ function Features(props) {
 
     const { selectedSize, setSelectedSize, selectedType, setSelectedType, selectedToppings, setSelectedToppings } = props
 
-    //const [selectedSize, setSelectedSize] = useState(null);
+    //const [selectedSize, setSelectedSize] = useState(null);  
     //const [selectedType, setSelectedType] = useState("");
     //const [selectedToppings, setSelectedToppings] = useState([]);
 
@@ -32,7 +32,7 @@ function Features(props) {
 
     return (
         <>
-            <div style={{ background: "white" }}>
+            <div className='container'>
                 <div class="row">
                     <div class="col" style={{ textAlign: "left" }}>
                         <h4 className='sizeType'>Boyut Seç</h4>
@@ -50,7 +50,6 @@ function Features(props) {
                                 {size}
                             </label>
                         ))}
-
                     </div>
                     <div class="col" style={{ textAlign: "left" }}>
                         <h4 className='sizeType'>Hamur Seç</h4>
@@ -60,11 +59,8 @@ function Features(props) {
                                 <option key={index} value={type}>{type}</option>
                             ))}
                         </select>
-
                     </div>
                 </div>
-
-
 
                 <div class="row">
                     <div class="col" style={{ textAlign: "left" }}>

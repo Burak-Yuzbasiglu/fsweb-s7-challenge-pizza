@@ -1,9 +1,13 @@
 .containerf {
+    display: flex;
+    flex-direction: column;
     padding-top: 50px;
-    background-color: red;
-    margin: 0;
-    padding: 0;
+    background-color: #CE2829;
+    margin: auto;
+    padding: auto;
     font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
 }
 
 .titlef {
@@ -13,7 +17,8 @@
     line-height: 50px;
     text-align: center;
     color: white;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 80px;
 }
 
 .subtitlef {
@@ -38,20 +43,18 @@
     margin-bottom: 10px;
 }
 
-
 .linef {
     width: 50%;
     margin: 0 auto;
     border-top: 1px solid white;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .info-containerf {
     align-items: center;
     justify-content: center;
-    text-align: left;
-    max-width: 200px;
-    margin-left: 190px;
+    align-content: center;
 }
 
 .infoTittlef {
@@ -60,7 +63,8 @@
     font-weight: 600;
     line-height: 29.44px;
     color: white;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .infof {
@@ -87,11 +91,12 @@
 }
 
 .order-summaryf {
-    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border: 1px solid #FAF7F2;
     padding: 20px;
-    max-width: 400px;
-    text-align: left;
-    margin-left: 70px;
+    text-align: center;
 }
 
 .summary-itemf {
@@ -99,9 +104,8 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 24.76px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 10px;
-    margin-left: 97px;
     color: white;
 }
 
@@ -110,9 +114,8 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 24.76px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 10px;
-    margin-left: 97px;
     color: white;
 }
 

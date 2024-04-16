@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home.jsx'
 import OrderPizza from './OrderPizza.jsx'
 import Success from './Success.jsx';
+import Footer from './components/footer.jsx';
 
 function App() {
 
@@ -14,17 +15,29 @@ function App() {
   const [selectedToppings, setSelectedToppings] = useState([]);
   const [quantity, setQuantity] = useState(1);
 
+  const propsObj = {
+    selectedSize,
+    setSelectedSize,
+    selectedType,
+    setSelectedType,
+    selectedToppings,
+    setSelectedToppings,
+    quantity,
+    setQuantity
+  };
+
   return (<>
     <div>
       <Switch>
         <Route path="/" exact>
           <Home />
+          <Footer />
         </Route>
         <Route path="/orderpizza" exact>
-          <OrderPizza selectedSize={selectedSize} setSelectedSize={setSelectedSize} selectedType={selectedType} setSelectedType={setSelectedType} selectedToppings={selectedToppings} setSelectedToppings={setSelectedToppings} quantity={quantity} setQuantity={setQuantity} />
+          <OrderPizza propsObj={propsObj} />
         </Route>
         <Route path="/success" exact>
-          <Success selectedSize={selectedSize} selectedType={selectedType} selectedToppings={selectedToppings} quantity={quantity} />
+          <Success {...propsObj} />
         </Route>
       </Switch>
     </div>

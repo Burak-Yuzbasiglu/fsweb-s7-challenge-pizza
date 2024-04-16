@@ -1,0 +1,93 @@
+.footer {
+    background: #1A1A1A;
+    color: #FFFFFF;
+}
+
+.footerCont {
+    display: flex;
+    background: #1A1A1A;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    display: inline-block;
+    margin-left: 200px;
+}
+
+.footer-column li {
+    display: flex;
+}
+
+.footer-column span {
+    margin-left: 20px;
+}
+
+.footer-title {
+    font-family: Londrina Solid;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.footer-title1 {
+    font-family: Londrina Solid;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.footer-info {
+    font-family: Barlow;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32.4px;
+    text-align: left;
+}
+
+.footer-subtitle {
+    margin-bottom: 50px;
+    margin-top: 90px;
+    font-family: Barlow;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32.11px;
+    text-align: left;
+}
+
+.footer-menu {
+    list-style-type: none;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-instagram {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    gap: 10px;
+    margin-bottom: 60px;
+    margin-right: 200px;
+}
+
+.footer-line {
+    border-top: 1px solid #FFFFFF26;
+}
+
+.footer-copy {
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+}

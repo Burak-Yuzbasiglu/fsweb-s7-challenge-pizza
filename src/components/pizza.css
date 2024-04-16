@@ -1,7 +1,8 @@
 #root {
-    max-width: 1280px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0rem;
     text-align: center;
 }
 
@@ -18,17 +19,6 @@
 
 .menu-buttons {
     display: flex;
-}
-
-.menu-buttons button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-}
-
-.menu-buttons button:hover {
-    text-decoration: underline;
 }
 
 .container {
@@ -260,6 +250,7 @@
     border-radius: 5px;
     text-align: left;
     background-color: #FAF7F2;
+    margin-bottom: 150px;
 }
 
 .order-summary h4 {
@@ -275,4 +266,10 @@
     padding-left: 35px;
     padding-top: 30px;
     padding-bottom: 20px;
+}
+
+.pizzaCont {
+    width: 100%;
+    background-color: #FAF7F2;
+    margin-bottom: 40px;
 }

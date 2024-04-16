@@ -23,7 +23,7 @@ function Details(props) {
 
     const calculateTotalPrice = () => {
         const toppingPrice = selectedToppings.length * 5;
-        const totalPrice = (100 + toppingPrice) * quantity;
+        const totalPrice = (85.50 + toppingPrice) * quantity;
         return totalPrice;
     };
 
@@ -42,7 +42,7 @@ function Details(props) {
 
     return (
         <>
-            <div >
+            <div className='container' >
                 <div className="order-note">
                     <h4 className='orderTittleNote'>Sipariş Notu</h4>
                     <textarea

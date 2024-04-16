@@ -16,7 +16,6 @@ function Success(props) {
             <hr className="linef" />
             <div className="infoTittlef">Position Absolute Acı Pizza</div>
             <div className='info-containerf'>
-
                 <div className="infof">Boyut: <span className="infof-bold">{selectedSize}</span></div>
                 <div className="infof">Hamur: <span className="infof-bold">{selectedType}</span></div>
                 <div className="infof">Ek Malzemeler: <span className="infof-bold">{toppingsString}</span></div>
@@ -24,8 +23,8 @@ function Success(props) {
             <br />
             <div className="order-summaryf">
                 <div className="summary-itemf">Sipariş Toplamı</div>
-                <div className="summary-item2f">Seçimler  <span className="summary-itemf">{totalSelectedToppings * quantity}₺</span></div>
-                <div className="summary-item2f">Toplam  <span className="summary-item3f">{(100 + totalSelectedToppings) * quantity}₺</span></div>
+                <div className="summary-item2f">Seçimler  <span className="summary-item3f">{totalSelectedToppings * quantity}₺</span></div>
+                <div className="summary-item2f">Toplam  <span className="summary-item3f">{(85.50 + totalSelectedToppings) * quantity}₺</span></div>
             </div>
         </div>
     );
