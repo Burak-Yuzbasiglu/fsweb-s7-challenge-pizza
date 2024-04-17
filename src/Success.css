@@ -46,15 +46,20 @@
 .linef {
     width: 50%;
     margin: 0 auto;
-    border-top: 1px solid white;
+    border-top: 2px solid #FAF7F2;
     margin-bottom: 40px;
     margin-top: 40px;
 }
 
 .info-containerf {
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-wrap: wrap;
+    max-width: 20%;
+    margin-left: 830px;
+
 }
 
 .infoTittlef {
@@ -74,6 +79,8 @@
     line-height: 24.76px;
     color: white;
     margin-bottom: 20px;
+    text-align: left;
+    max-width: 300px;
 }
 
 .infof-bold {
@@ -83,6 +90,7 @@
     line-height: 24.76px;
     color: white;
     margin-bottom: 20px;
+    margin-left: 5px;
 }
 
 .total-infof {
@@ -104,9 +112,10 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 24.76px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 10px;
     color: white;
+    margin-left: 810px;
 }
 
 .summary-item2f {

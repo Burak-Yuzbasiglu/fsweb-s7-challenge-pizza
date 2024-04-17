@@ -8,6 +8,7 @@ function Details(props) {
     const { selectedSize, selectedType, selectedToppings, quantity, setQuantity } = props
 
     const [orderNote, setOrderNote] = useState("");
+    const [customerName, setCustomerName] = useState("");
     //const [quantity, setQuantity] = useState(1);
     const history = useHistory();
 
@@ -30,11 +31,11 @@ function Details(props) {
 
     const handleOrder = () => {
         if (selectedSize == null) {
-            alert("Pizza Boyutu alanı boş bırakılamaz!!!")
+            alert("Pizza Boyutu alanı boş bırakılamaz :(")
             return;
         }
         if (selectedType === "") {
-            alert("Hamur Tipi alanı boş bırakılamaz!!!")
+            alert("Hamur Tipi alanı boş bırakılamaz :(")
             return;
         }
         history.push('/success');
@@ -43,6 +44,15 @@ function Details(props) {
     return (
         <>
             <div className='container' >
+                <div className="customer-name">
+                    <h4 className="customerNameTitle">Sipariş Sahibinin İsmi</h4>
+                    <input
+                        type="text"
+                        placeholder="Güzel isminizi bizimle paylaşır mısın :)"
+                        value={customerName}
+                        onChange={(e) => setCustomerName(e.target.value)}
+                    />
+                </div>
                 <div className="order-note">
                     <h4 className='orderTittleNote'>Sipariş Notu</h4>
                     <textarea
