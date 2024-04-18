@@ -32,10 +32,16 @@ function Details(props) {
     const handleOrder = () => {
         if (selectedSize == null) {
             alert("Pizza Boyutu alanı boş bırakılamaz :(")
+            window.scrollTo(0, 500);
             return;
         }
         if (selectedType === "") {
             alert("Hamur Tipi alanı boş bırakılamaz :(")
+            window.scrollTo(0, 500);
+            return;
+        }
+        if (customerName.length < 3) {
+            alert('Lütfen geçerli bir isim girin (en az 3 karakter)');
             return;
         }
         history.push('/success');

@@ -129,7 +129,8 @@
 .checkboxLabel {
     display: inline-block;
     margin-right: 50px;
-    flex-basis: calc(25% - 10px)
+    flex-basis: calc(25% - 10px);
+    cursor: pointer;
 }
 
 .toppings-container {
